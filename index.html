@@ -455,8 +455,19 @@
   .hero__eyebrow {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.5rem;
     color: var(--paper);
+  }
+  .hero__location {
+    font-size: clamp(1rem, 1.4vw, 1.35rem);
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--paper);
+    line-height: 1;
+  }
+  .hero__descriptor {
+    opacity: 0.55;
   }
   .hero__eyebrow .marginalia { color: rgba(247, 245, 242, 0.7); }
   .hero__coords {
@@ -470,9 +481,9 @@
     .hero__coords { display: none; }
   }
   .hero__headline {
-    font-size: clamp(3.75rem, 13vw, 13rem);
+    font-size: clamp(3.5rem, 9vw, 8.5rem);
     font-weight: 600;
-    line-height: 0.86;
+    line-height: 0.88;
     letter-spacing: -0.05em;
     color: var(--paper);
   }
@@ -1467,8 +1478,8 @@
 
     <div class="hero__top">
       <div class="hero__eyebrow">
-        <span class="label label--paper">· Architectural Surface Specialists</span>
-        <span class="marginalia" style="color: rgba(247, 245, 242, 0.7);">Melbourne, Australia</span>
+        <span class="hero__location">Melbourne, Australia</span>
+        <span class="label label--paper hero__descriptor">Architectural Surface Specialists</span>
       </div>
     </div>
 
