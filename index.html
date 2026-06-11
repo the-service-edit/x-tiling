@@ -306,6 +306,16 @@
     align-items: center;
     padding: 1.5rem var(--gutter);
   }
+  .overlay__brand {
+    display: block;
+    width: 56px;
+    line-height: 0;
+  }
+  .overlay__brand img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .overlay__close {
     color: var(--paper);
     font-size: 0.85rem;
@@ -1188,6 +1198,17 @@
     gap: 1.5rem;
     max-width: 30ch;
   }
+  .footer__logo {
+    display: block;
+    width: 110px;
+    line-height: 0;
+    margin-bottom: 0.5rem;
+  }
+  .footer__logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .footer__brand {
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 500;
@@ -1280,7 +1301,9 @@
 <!-- Fullscreen overlay -->
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Main menu" aria-hidden="true">
   <div class="overlay__top">
-    <span class="nav__brand" style="color: var(--paper);">X Tiling Solutions<small>Melbourne</small></span>
+    <a href="#" class="overlay__brand" aria-label="X Tiling Solutions home">
+      <img src="images/logo.jpg" alt="X Tiling Solutions" />
+    </a>
     <button class="overlay__close" id="menuClose" aria-label="Close menu">
       <span>Close</span>
       <span class="overlay__close-icon" aria-hidden="true"></span>
@@ -1812,6 +1835,9 @@
   <div class="footer__inner">
     <div class="footer__top">
       <div class="footer__brand-block">
+        <a href="#" class="footer__logo" aria-label="X Tiling Solutions">
+          <img src="images/logo.jpg" alt="X Tiling Solutions" />
+        </a>
         <h2 class="footer__brand">Crafted <em>without</em> compromise.</h2>
         <p class="footer__tag">Architectural surface specialists. Melbourne and Mornington Peninsula.</p>
       </div>
