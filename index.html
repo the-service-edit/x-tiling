@@ -1034,19 +1034,20 @@
      CONTACT
      ============================================ */
   .contact {
-    background-color: var(--paper-warm);
+    background-color: var(--ink);
     background-image: url('images/enquire.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-block: clamp(7rem, 14vw, 14rem);
     position: relative;
+    color: var(--paper);
   }
   .contact::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(239, 235, 229, 0.88);
+    background: rgba(20, 20, 20, 0.78);
     z-index: 0;
     pointer-events: none;
   }
@@ -1056,6 +1057,38 @@
     padding-inline: var(--gutter);
     position: relative;
     z-index: 1;
+  }
+  /* Dark-section text overrides */
+  .contact .label { color: rgba(247, 245, 242, 0.5); }
+  .contact__title { color: var(--paper); }
+  .contact__sub { color: rgba(247, 245, 242, 0.7); }
+  .contact .field { border-bottom-color: rgba(247, 245, 242, 0.15); }
+  .contact .field__label { color: rgba(247, 245, 242, 0.5); }
+  .contact .field__input,
+  .contact .field__textarea,
+  .contact .field__select { color: var(--paper); }
+  .contact .field__input::placeholder,
+  .contact .field__textarea::placeholder { color: rgba(247, 245, 242, 0.35); }
+  .contact .field:focus-within .field__label { color: var(--paper); }
+  .contact .field__select {
+    background-image: linear-gradient(45deg, transparent 50%, var(--paper) 50%), linear-gradient(135deg, var(--paper) 50%, transparent 50%);
+  }
+  @media (min-width: 720px) {
+    .contact .form__row .field:first-child { border-right-color: rgba(247, 245, 242, 0.15); }
+  }
+  .contact .info-block { border-top-color: rgba(247, 245, 242, 0.15); }
+  .contact .info-block__label { color: rgba(247, 245, 242, 0.5); }
+  .contact .info-block__value { color: var(--paper); }
+  .contact .info-block__value a:hover { color: var(--stone); }
+  .contact .form__submit {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--paper);
+  }
+  .contact .form__submit:hover {
+    background: transparent;
+    color: var(--paper);
+    border-color: var(--paper);
   }
   .contact__head {
     display: grid;
